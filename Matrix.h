@@ -75,19 +75,19 @@ public:
 	/// </summary>
 	/// <param name="radian"></param>
 	/// <returns></returns>
-	static::Matrix4x4 MakeRotateXMatrix(float radian);
+	static Matrix4x4 MakeRotateXMatrix(float radian);
 	/// <summary>
 	/// 2.Y軸回転行列
 	/// </summary>
 	/// <param name="radian"></param>
 	/// <returns></returns>
-	static::Matrix4x4 MakeRotateYMatrix(float radian);
+	static Matrix4x4 MakeRotateYMatrix(float radian);
 	/// <summary>
 	/// 3.Z軸回転行列
 	/// </summary>
 	/// <param name="radian"></param>
 	/// <returns></returns>
-	static::Matrix4x4 MakeRotateZMatrix(float radian);
+	static Matrix4x4 MakeRotateZMatrix(float radian);
 
 };
 

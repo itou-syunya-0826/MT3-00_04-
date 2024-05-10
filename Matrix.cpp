@@ -6,7 +6,7 @@ using namespace std;
 
 Matrix::Matrix(){}
 
-Matrix4x4 Add(const Matrix4x4& m1, const Matrix4x4& m2)
+Matrix4x4 Matrix::Add(const Matrix4x4& m1, const Matrix4x4& m2)
 {
 	Matrix4x4 result{};
 
@@ -19,7 +19,7 @@ Matrix4x4 Add(const Matrix4x4& m1, const Matrix4x4& m2)
 	return result;
 }
 
-Matrix4x4 Subtract(const Matrix4x4& m1, const Matrix4x4& m2)
+Matrix4x4 Matrix::Subtract(const Matrix4x4& m1, const Matrix4x4& m2)
 {
 	Matrix4x4 result{};
 
@@ -32,7 +32,7 @@ Matrix4x4 Subtract(const Matrix4x4& m1, const Matrix4x4& m2)
 	return result;
 }
 
-Matrix4x4 Multiply(const Matrix4x4& m1, const Matrix4x4& m2)
+Matrix4x4 Matrix::Multiply(const Matrix4x4& m1, const Matrix4x4& m2)
 {
 	Matrix4x4 result{};
 
@@ -48,7 +48,7 @@ Matrix4x4 Multiply(const Matrix4x4& m1, const Matrix4x4& m2)
 	return result;
 }
 
-Matrix4x4 Inverse(const Matrix4x4& matrix)
+Matrix4x4 Matrix::Inverse(const Matrix4x4& matrix)
 {
 	Matrix4x4 result{};
 
@@ -215,7 +215,7 @@ Matrix4x4 Inverse(const Matrix4x4& matrix)
 
 }
 
-Matrix4x4 Transpose(const Matrix4x4& matrix)
+Matrix4x4 Matrix::Transpose(const Matrix4x4& matrix)
 {
 	Matrix4x4 result{};
 
@@ -228,7 +228,7 @@ Matrix4x4 Transpose(const Matrix4x4& matrix)
 	return result;
 }
 
-Matrix4x4 MakeIdentity4x4()
+Matrix4x4 Matrix::MakeIdentity4x4()
 {
 	Matrix4x4 result{};
 
@@ -293,7 +293,7 @@ Matrix4x4 Matrix::MakeRotateXMatrix(float radian) {
 
 	Matrix4x4 result =
 	{
-		0, 0, 0, 1,
+		1, 0, 0, 0,
 		0, cosf(radian), sin(radian), 0,
 		0, -sinf(radian), cosf(radian), 0,
 		0, 0, 0, 1
